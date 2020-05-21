@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1> Hello, {{ user.username }}</h1>
+  {% for recommendation in recommendations %}
+  <div>
+    <p>{{recommendation.friend.username}} recommends the {{recommendation.type}}: <b> {{recommendation.title}}</b></p>
+  </div>
+  {% endfor %}
+{% endblock %}
